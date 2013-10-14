@@ -10,8 +10,9 @@ RapydBox allows to use this Javascript library from RapydScript (a Python to Jav
 
 The deployment will be done using Node-Webkit and Enigma Virtual Box
 
-You can see a demo  here
+You can see a demo  here :
 
   http://salvatore.pythonanywhere.com/RapydBox
+
 
 
