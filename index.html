@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>RapydBox</title>
+    <link href="main.css" rel="stylesheet" type="text/css" />
+    <link href="codemirror/theme/monokai.css" rel="stylesheet" type="text/css" />
+    <link href="codemirror/theme/eclipse.css" rel="stylesheet" type="text/css" />
+    <link href="codemirror/lib/codemirror.css" rel="stylesheet" type="text/css" />
+    <script  src="rapydscript/jquery.js"></script>
+    <script  src="codemirror/lib/codemirror.js"></script>
+    <script  src="codemirror/mode/javascript/javascript.js"></script>
+    <script  src="codemirror/mode/python/python.js"></script>
+    <script  src="rapydscript/stdlib.js"></script>
+    <script  src="rapydscript/utils.js"></script>
+    <script  src="rapydscript/ast.js"></script>
+    <script  src="rapydscript/baselib.js"></script>
+    <script  src="rapydscript/output.js"></script>
+    <script  src="rapydscript/parse.js"></script>
+    <script  src="rapydscript/starter.js" ></script>
+    <script  src="js/canvasupd.js" ></script>
+    <!--  start app in starter.js -->
+
+</head>
+    <body>
+        <div class="main">
+            <div id="menubar" class="dp100" style="background: #1e90ff; margin-bottom: 10px;">
+                <select id="select" onchange="Application.loadSample()">
+                    <option>Samples</option>
+                    <option>first</option>
+                    <option>Deux</option>
+                    <option>Trois</option>
+                </select>
+                <button type="button" onclick="Application.run()" id="run">Run</button>
+                <button type="button" onclick="Application.loadScript()" id="loadscript">Load Script</button>
+                <button type="button" onclick="Application.saveScript()" id="savescript">Save Script</button>
+                <button type="button" onclick="Application.pauseAnim()" id="pauseanim">Pause Anim.</button>
+                <button type="button" onclick="Application.stopAnim()" id="stopanim">Stop Anim.</button>
+                <button type="button" onclick="Application.saveImage()" id="saveimage">Save Image</button>
+            </div>
+            <div style="width:1250px; margin: auto;">
+                <div  class="dp50">
+                    <div style="height:650px;">
+                        <textarea id="editor" rows="2" cols="60"></textarea>      
+                    </div>
+                </div>
+                <div  class="dp50">
+                    <div id="canvaswrapper" style="height:650px;overflow:auto;">
+                        <canvas id="canvas"></canvas>        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input  id="saveas"  type="file"  nwsaveas/>
+        <input  id="loadFile"  type="file"  />
+    </body>
+</html>
