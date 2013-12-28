@@ -1,6 +1,0 @@
-﻿def Hello():
-    alert("Hello")
-
-
-
-
