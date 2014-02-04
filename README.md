@@ -4,7 +4,7 @@ Here are the steps to run RapydBox :
 
 2 - Download ans install node-webkit for your platform (Linux, Windows, MAc)
 
-3 - Simply run node-webkit giving in argument the folder you unziped RapydBox
+3 - Simply run node-webkit giving in argument the folder you where unziped or cloned RapydBox
 
 4 - Run the samples from the 'sketches' directory
 
