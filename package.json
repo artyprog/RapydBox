@@ -8,7 +8,9 @@
         "show"     : true,
         "frame"    : true,
         "toolbar"  : true,
-        "resizable": true
+        "resizable": true,
+		"width" : 1280,
+		"height" : 768
 
   }
 }

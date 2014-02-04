@@ -12,11 +12,11 @@
 
 /*##################################################################################################*/
 
-try { $; } catch(e) {
-    function $(id) {
-        return document.getElementById(id);
-    }
-}
+//try { $; } catch(e) {
+//    function $(id) {
+//        return document.getElementById(id);
+//    }
+//}
 
 function attachEvent(element, name, f) {
     /* Cross-browser attachEvent().

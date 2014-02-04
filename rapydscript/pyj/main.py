@@ -14,23 +14,27 @@ Dom = (def ():
     return {getId : getId}
 )()
 
+
 ################################################### Application ###########################################################
 Application  = (def ($,D):
 
     editor_setted = False
     editor_value = None
+    editor_width = "100%"
+    editor_height = "100%"
+
+    fs = require('fs')	
 
     def setEditor(id):
         nonlocal cm,  editor_setted   
         if editor_setted: return 
         elt = D.getId(id)
-        cm = CodeMirror.fromTextArea(elt)
-        cm.setValue("alert('Hello from RapydScript')")
+        cm = CodeMirror.fromTextArea(elt)       
         cm.setOption("mode","python")
         cm.setOption("theme","monokai")
         cm.setOption("indentUnit",4)
         cm.setOption("lineNumbers",True)
-        cm.setSize(620, 650)
+        cm.setSize(editor_width, editor_height)
         editor_setted  = True
 
     # Menu
@@ -49,7 +53,10 @@ Application  = (def ($,D):
         loadf.trigger("click")
         loadf.change(def (evt):
                          path = $(this).val()
-                         alert(path)
+                         #setEditorValue(path) 
+                         fs.readFile(path,'utf8', def (err,c):
+                             setEditorValue(c)
+                         )
         )
 
     def saveImage():
@@ -78,10 +85,7 @@ Application  = (def ($,D):
         )
 
     def stopAnim():
-        alert("Stop Animation")
-
-    def pauseAnim():
-        alert("pauseAnimation")
+        window.canvas.stop()        
 
     def getEditorValue():
         nonlocal editor_value
@@ -91,53 +95,36 @@ Application  = (def ($,D):
     def setEditorValue(src):
         cm.setValue(src)
         editor_value = src
-    
+      
     def run():
         try:
-            delete(window.canvas)
-            window.canvas = new Canvas(Dom.getId('canvas'))    
+            window.canvas.stop()
+            delete(window.canvas)            
+            window.canvas = new Canvas(Dom.getId('canvas'))  
             evaluate(getEditorValue())	
         except:
             alert("error when evaluating");	    
 
     def setupCanvas():
-        window.canvas = new Canvas(Dom.getId('canvas'))    
-        setEditorValue(defaultScript)
-
-    def hello():
-        alert("HELLO")
-
-    def main():
+        window.canvas = new Canvas(Dom.getId('canvas'))            
+        $.get("sketches/first.pyj", def(r):
+                setEditorValue(r)            
+                evaluate(getEditorValue())	
+        )
+           
+    def main():       
         setEditor("editor")
         setupCanvas()
- 
+
     return { start: main, 
              run : run, 
              loadScript : loadScript,
              saveScript : saveScript,
              saveImage : saveImage,
              stopAnim : stopAnim,
-             pauseAnim : pauseAnim,
              loadSample : loadSample,
-             hello : App.hello
            }
 
 )(jQuery,Dom)
-
-##################################################### Miscellanous ##############################
-
-
-defaultScript = """# Basic script0
-# Click 'Run' to launch it
-
-
-WIDTH, HEIGHT = 625, 640
-
-canvas.size(WIDTH,HEIGHT)
-fill(1,0.98,0.89)
-rect(0,0,WIDTH,HEIGHT)
-stroke(1,0,0)
-line(0,0,WIDTH,HEIGHT)
-"""
 
 

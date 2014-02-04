@@ -51,9 +51,17 @@ function evaluate(data, create, name) {
 
 var mainScript = "rapydscript/pyj/moduleLoader.py";
 
-jQuery.noConflict();
+
+function setupUI() {
+    var pstyle = 'border: Apx solid #ff0000; padding: 5px;'
+
+   
+}
+
+
 jQuery(document).ready(function () {
     jQuery.get(mainScript, function (r) {
         evaluate(r, true);
+        setupUI();
     });
 });
