@@ -1,3 +1,4 @@
+
 Here are the steps to run RapydBox :
 
 1 - Clone or Download RapydBox from this site
@@ -24,3 +25,7 @@ Crédits :
  - The creators of CodeMirror
  
  
+
+PS : I could easily create a packaged apploication (thanks to node-webkit), but 
+it seems to be a bad idea to give direct download to  a binary...
+But if you really want it, send me a post
