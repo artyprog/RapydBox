@@ -19,3 +19,9 @@ Crédits :
  - Frederic de Bleser and Tom De Smedt for Nodebox
  - Roger Wang for Node-WebKit
  - The creators of CodeMirror
+ 
+
+You can test the online (Firefox, Safari) version here  :
+
+http://salvatore.pythonanywhere.com/RapydBox/editor
+ 
