@@ -20,8 +20,4 @@ Crédits :
  - Roger Wang for Node-WebKit
  - The creators of CodeMirror
  
-
-You can test the online (Firefox, Safari) version here  :
-
-http://salvatore.pythonanywhere.com/RapydBox/editor
  
