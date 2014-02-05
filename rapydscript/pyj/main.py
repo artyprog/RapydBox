@@ -47,25 +47,35 @@ Application  = (def ($,D):
                 setEditorValue(r)            
             )
 
+    # Signal user to run after loading script
+    def changeRunButton(reset=False):
+        r = Dom.getId("run")
+        if reset:
+            r.style.color = "rgb(230,250,255)"
+        else:
+            r.style.color = "red"
+
     # Script manage
     def loadScript():
         loadf = $("#loadFile") 
         loadf.trigger("click")
         loadf.change(def (evt):
                          path = $(this).val()
-                         #setEditorValue(path) 
                          fs.readFile(path,'utf8', def (err,c):
                              setEditorValue(c)
+                             changeRunButton()
+                             loadf.val("")                      
                          )
         )
 
     def saveImage():
         data = canvas.save()
-        saveas = $("#saveas") 
+        saveas = $("#saveimage") 
         saveas.trigger("click")
-        saveas.change(def (evt) :
-            path = $(this).val()                		       
-            require("fs").writeFile( path , 
+        saveas.one("change", def (evt) :
+            path = $(this).val() 
+            $(this).val("")
+            require("fs").writeFile( path + ".png", 
                 data[22:], 'base64', 
                 def ():
                     alert("Image successfully saved")
@@ -74,11 +84,11 @@ Application  = (def ($,D):
 
     def saveScript():
         data = getEditorValue()
-        saveas = $("#saveas") 
+        saveas = $("#savescript") 
         saveas.trigger("click")
-        saveas.change(def (evt) :
+        saveas.one("change", def (evt) :
             path = $(this).val()                		       
-            require("fs").writeFile( path , data,
+            require("fs").writeFile( path + ".pyj", data,
                 def ():
                     alert("Script successfully saved")
             )
@@ -97,6 +107,7 @@ Application  = (def ($,D):
         editor_value = src
       
     def run():
+        changeRunButton(True)
         try:
             window.canvas.stop()
             delete(window.canvas)            
@@ -112,6 +123,18 @@ Application  = (def ($,D):
                 evaluate(getEditorValue())	
         )
            
+    def clearCanvas():
+        stopAnim()
+        window.canvas.clear()
+        delete(window.canvas)
+        window.canvas = new Canvas(Dom.getId('canvas'))
+
+
+    def clearScene():
+        clearCanvas()
+        cm.setValue("")
+
+
     def main():       
         setEditor("editor")
         setupCanvas()
@@ -123,6 +146,8 @@ Application  = (def ($,D):
              saveImage : saveImage,
              stopAnim : stopAnim,
              loadSample : loadSample,
+             clearCanvas : clearCanvas,
+             clearScene : clearScene
            }
 
 )(jQuery,Dom)

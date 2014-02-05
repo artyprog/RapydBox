@@ -50,6 +50,10 @@
                     <button onclick="Application.saveImage()">Save Image</button></li>
                 <li>
                     <button  onclick="Application.stopAnim()">Stop Animation</button></li>
+                <li>
+                    <button  onclick="Application.clearScene()">Clear Scene</button></li>
+                <li>
+                    <button  onclick="Application.clearCanvas()">Clear Canvas</li>    
             </ul>
         </div>
     </div>
@@ -59,7 +63,8 @@
         <textarea id="editor" rows="2"></textarea>
     </div>
     <div style="display:none">
-             <input  id="saveas"  type="file"  nwsaveas/>
+        <input  id="saveimage"  type="file"  nwsaveas/>
+        <input  id="savescript"  type="file"  nwsaveas/>
         <input  id="loadFile"  type="file"  />
     </div>
 </body>

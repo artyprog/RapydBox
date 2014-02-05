@@ -1,0 +1,9 @@
+(def ():
+    
+    def name ():
+        return "ModMath"
+    
+    return ModMath = {
+               name : name
+           }
+)()
