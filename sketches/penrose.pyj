@@ -1,0 +1,50 @@
+# This is a sample from NodeBox 1 site
+
+size(600, 600)
+background(0.01)
+translate(300, 300) #center starting point
+
+_ctx.shadowColor = "black" 
+_ctx.shadowOffsetX = 10
+_ctx.shadowBlur = 1
+
+strokewidth(random(150.435))
+strokeColor = color(.6, .3, .7, .3)
+stroke(strokeColor)
+
+def draw():
+    line(0, 0, segmentLength, 0)
+ 
+def iterate(n, rule):
+    global strokeColor
+    if rule == '-':
+        rotate(rightTurnAngle)
+    elif rule == '+':
+        rotate(leftTurnAngle)
+    elif rule == "[": 
+        push()
+    elif rule == "]":
+         pop()
+    else:
+        if n >= 0:
+            for step in rules[rule]:
+                iterate(n-1, step)
+        elif rule=='1':
+            strokeColor = color(random(1), random(.41), random(.281), random(0.5))  
+            stroke(strokeColor)            
+            draw()
+            translate(segmentLength, 0)
+ 
+segmentLength = 85.0
+rightTurnAngle = -3.0
+leftTurnAngle =  73.80
+        
+rules= {}
+ 
+rules['6'] ='81++91----71[-81----61]++'
+rules['7'] = '+81--91[---61--71]+'
+rules['8'] = '-61++71[+++81++91]-'
+rules['9'] = '--81++++61[+91++++71]--71'
+rules['1'] = ''
+rules['start'] = '[7]++[7]++[7]++[7]++[7]'
+iterate(5, 'start')
