@@ -30,7 +30,7 @@ def iterate(n, rule):
             for step in rules[rule]:
                 iterate(n-1, step)
         elif rule=='1':
-            strokeColor = color(random(1), random(.41), random(.281), random(0.5))  
+            strokeColor = color(random(1), random(.41), random(.281), random(1)+0.25)  
             stroke(strokeColor)            
             draw()
             translate(segmentLength, 0)
