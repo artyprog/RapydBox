@@ -24,7 +24,10 @@ Crédits :
  - The creators of CodeMirror
  
  
+You can download the packaged distributions for Mac and Windows here  :
 
-PS : I could easily create a packaged application (thanks to node-webkit), but 
-it seems to be a bad idea to give direct download to  a binary...
-But if you really want it, send me a post
+Mac : https://drive.google.com/file/d/0BzbBLihGGNVWcVZ3cDI5aV95T0k/edit?usp=sharing
+
+Windows : https://drive.google.com/file/d/0BzbBLihGGNVWN3VMVkhRMlZnWTg/edit?usp=sharing
+
+
