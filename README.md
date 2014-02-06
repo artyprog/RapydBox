@@ -26,8 +26,8 @@ Crédits :
  
 You can download the packaged distributions for Mac and Windows here  :
 
-Mac : https://drive.google.com/file/d/0BzbBLihGGNVWcVZ3cDI5aV95T0k/edit?usp=sharing
+Mac : https://drive.google.com/file/d/0BzbBLihGGNVWcVZ3cDI5aV95T0k
 
-Windows : https://drive.google.com/file/d/0BzbBLihGGNVWN3VMVkhRMlZnWTg/edit?usp=sharing
+Windows : https://drive.google.com/file/d/0BzbBLihGGNVWN3VMVkhRMlZnWTg
 
 
