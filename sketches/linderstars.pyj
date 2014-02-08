@@ -1,0 +1,54 @@
+# This is a sample from NodeBox1 gallery
+
+size(600, 600)
+background(1)
+translate(300, 300) #center starting point
+
+
+
+shadow(1)
+strokewidth(1)
+strokeColor = color(.0, .3, .7, .13)
+stroke(strokeColor)
+
+
+def draw():
+    line(0, 0, segmentLength, 0)
+ 
+def iterate(n, rule):
+    global strokeColor
+    if rule == '-':
+        rotate(rightTurnAngle)
+    elif rule == '+':
+        rotate(leftTurnAngle)
+    elif rule == "[": 
+        push()
+    elif rule == "]":
+         pop()
+    else:
+        if n >= 0:
+            for step in rules[rule]:
+                iterate(n-1, step)
+        elif rule=='1':
+            strokeColor = color(random(1)+0.3, 0.52, 0, 0.14)  
+            stroke(strokeColor)            
+            draw()
+            translate(segmentLength, 0)
+ 
+segmentLength = 35.0
+rightTurnAngle = -90.0 + random(-1,1)
+leftTurnAngle =  90.0 + random(-1,1)
+        
+rules= {}
+ 
+
+rules['2'] = '1+2+1'
+rules['1'] = '2-1-2'
+rules['start'] = '2'
+for i  in range(3):
+    iterate(9, 'start')
+
+
+
+
+

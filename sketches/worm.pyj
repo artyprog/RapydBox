@@ -1,0 +1,39 @@
+def setup(canvas):
+    nonlocal a, b
+    a = 100
+    b = 12
+    
+    
+def draw(canvas):    
+    nonlocal a,b
+    
+    
+    background(0,0,0.15)
+    cX = a
+    cY = b
+
+    x = 180
+    y = -27
+    fontsize(54)
+    c = 0.0
+    for i in range(48):
+        x += Math.cos(cY)
+        y += Math.log(cX)*1 + Math.sin(cX) 
+
+        fill(Math.sin((a+c)), 0.3, 0.0, 0.5)
+
+        s = 22 + Math.cos(cX)*1
+        star(x-s/4, y-s/4, s, s)
+        # Try the next line instead of the previous one to see how
+        # you can use other primitives.
+        #star(x-s/2,y-s/2, random(5,10), inner=2+s*0.1,outer=10+s*0.1)
+
+        cX += random(0.925)
+        cY += random(0.25)
+        c += 0.51
+    a += 0.1
+    b += 0.05
+    
+canvas.setup = setup
+canvas.draw = draw
+canvas.run()
