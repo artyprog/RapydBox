@@ -1,0 +1,19 @@
+size(400,400)
+
+
+background(1)
+shadow(1,1,1,1)
+
+translate(200,200)
+
+stroke(0,0,0,0.15)
+nostroke()
+
+r = 20000
+s = 140
+for i in range(r):
+    push()
+    fill(1,Math.log(i/1000),0,Math.sin(i/(s)))
+    rotate(180*Math.sin(6.0 * i))
+    rect(0,0,s -(s*i/r), s-(s*i/r))
+    pop()
