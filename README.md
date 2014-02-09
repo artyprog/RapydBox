@@ -24,7 +24,8 @@ Crédits :
  - The creators of CodeMirror
  
  
-You can see a preview online with Firefox here :
+You can see a preview online with Firefox.
+
 I insist, it is a preview, the desktop version is largely  nicer, and does not depend
 on browser.
 
