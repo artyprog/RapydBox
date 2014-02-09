@@ -26,7 +26,7 @@ Crédits :
  
 You can see a preview online with Firefox here :
 
-RapydBox online <a href"http://salvatore.pythonanywhere.com/RapydBox/editor">RapydBox Online</a>
+RapydBox online <a href="http://salvatore.pythonanywhere.com/RapydBox/editor">RapydBox Online</a>
 
 You can download the packaged distributions for Mac and Windows here  :
 
