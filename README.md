@@ -25,6 +25,8 @@ Crédits :
  
  
 You can see a preview online with Firefox here :
+I insist, it is a preview, the desktop version is largely  nicer, and does not depend
+on browser.
 
 RapydBox online <a href="http://salvatore.pythonanywhere.com/RapydBox/editor">RapydBox Online</a>
 
