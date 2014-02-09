@@ -24,6 +24,10 @@ Crédits :
  - The creators of CodeMirror
  
  
+You can see a preview online with Firefox here :
+
+RapydBox online <a href"http://salvatore.pythonanywhere.com/RapydBox/editor">RapydBox online</a>
+
 You can download the packaged distributions for Mac and Windows here  :
 
 Mac : <a href="https://drive.google.com/uc?id=0BzbBLihGGNVWcVZ3cDI5aV95T0k&export=download">RapydBox.app.zip</a>
