@@ -1,3 +1,6 @@
+<img src="https://salvatore.pythonanywhere.com/RapydBox/static/images/sombrero.jpg" />
+
+
 Here are the steps to run RapydBox :
 
 1 - Clone or Download RapydBox from this site
