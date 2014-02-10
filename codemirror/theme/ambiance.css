@@ -2,11 +2,11 @@
 
 /* Color scheme */
 
-.cm-s-ambiance .cm-keyword { color: #cda869; }
+.cm-s-ambiance .cm-keyword { color: #ff5500; }
 .cm-s-ambiance .cm-atom { color: #CF7EA9; }
 .cm-s-ambiance .cm-number { color: #78CF8A; }
 .cm-s-ambiance .cm-def { color: #aac6e3; }
-.cm-s-ambiance .cm-variable { color: #ffb795; }
+.cm-s-ambiance .cm-variable { color: #f5f5ff; }
 .cm-s-ambiance .cm-variable-2 { color: #eed1b3; }
 .cm-s-ambiance .cm-variable-3 { color: #faded3; }
 .cm-s-ambiance .cm-property { color: #eed1b3; }
