@@ -31,7 +31,7 @@ Application  = (def ($,D):
         elt = D.getId(id)
         cm = CodeMirror.fromTextArea(elt)       
         cm.setOption("mode","python")
-        cm.setOption("theme","monokai")
+        cm.setOption("theme","ambiance")
         cm.setOption("indentUnit",4)
         cm.setOption("lineNumbers",True)
         cm.setSize(editor_width, editor_height)
