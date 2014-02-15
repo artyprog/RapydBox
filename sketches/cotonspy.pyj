@@ -1,0 +1,19 @@
+size(400,400)
+
+
+background(0.2)
+shadow(-0.26,1,1)
+
+translate(210,200)
+
+stroke(0,0,0,0.15)
+nostroke()
+
+r = 13600
+s = 100
+for i in range(r):
+    push()
+    fill(1,0,0,i/r)
+    rotate(90*Math.log(i/70))
+    rect(0,0,random(100)+s-(s*i/r), s-(s*i/r))
+    pop()

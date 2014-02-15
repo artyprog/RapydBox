@@ -7,7 +7,7 @@
         "position" : "center",
         "show"     : true,
         "frame"    : true,
-        "toolbar"  : false,
+        "toolbar"  : true,
         "resizable": true,
 		"width" : 1280,
 		"height" : 768

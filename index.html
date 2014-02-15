@@ -14,6 +14,7 @@
     <script src="js/jquery.js" type="text/javascript"></script>
     <script src="js/jquery-ui-latest.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/jquery.layout-latest.js"></script>
+    <script type="text/javascript" src="js/lightgl.js"></script>
     <script src="codemirror/lib/codemirror.js" type="text/javascript"></script>
     <script src="codemirror/mode/javascript/javascript.js" type="text/javascript"></script>
     <script src="codemirror/mode/python/python.js" type="text/javascript"></script>
@@ -30,13 +31,12 @@
 <body>
     <script>
         $(document).ready(function () {
-
-            window.layout = $('body').layout({ applyDemoStyles: false });
-   
+             window.layout = $('body').layout({ applyDemoStyles: false });
+             window.scene = $("#scene") 
         });
     </script>
-    <div class="ui-layout-center">
-        <canvas id="canvas"></canvas> 
+    <div class="ui-layout-center" id="scene">
+        <canvas id="canvas"></canvas>
     </div>
     <div class="ui-layout-north">
         <div>

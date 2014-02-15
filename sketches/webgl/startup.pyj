@@ -1,0 +1,35 @@
+def removeAllChilds(node):
+    while node.hasChildNodes():
+        node.removeChild(node.lastChild)
+
+def render():
+    nonlocal glcanvas
+    requestAnimationFrame(render, glcanvas)
+    gl.clearColor(1.0, 0.0, 0.0, 1.0)
+    gl.clear(gl.COLOR_BUFFER_BIT)
+
+def main():
+    nonlocal glcanvas, gl
+    glcanvas = document.createElement("canvas")
+    scene = document.getElementById("scene")
+    removeAllChilds(scene)
+    scene.insertBefore(glcanvas, scene.firstChild)
+    gl = glcanvas.getContext("experimental-webgl")
+
+    glcanvas.width = 640
+    glcanvas.height = 480
+
+    gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight)
+
+    render()
+
+    
+main()
+    
+
+    
+    
+
+    
+    
+

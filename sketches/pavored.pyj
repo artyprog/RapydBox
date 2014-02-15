@@ -1,0 +1,39 @@
+size(400,400)
+
+
+background(0.1,0.1,0.1)
+shadow(0,0.93,0)
+
+translate(200,200)
+
+stroke(0,0,0,0.15)
+nostroke()
+
+r = 2000
+s = 100
+for i in range(r):
+    push()
+    fill(1-(r-1.2*i)/r,Math.log(r/2000),0,i/(r))
+    rotate(i)
+    rect(random(-10,10),random(-10,10),random(70)+s-(s*i/r), random(3,-3)+s-(s*i/r))
+    pop()
+
+    
+r = 1300
+s = 20
+for i in range(r):
+    push()
+    fill(1,1,1,i/(r+i/10))
+    rotate(i)
+    rect(random(-10,10),random(-10,10),random(100)+s-(s*i/r), random(1,-1)+s-(s*i/r))
+    pop()
+
+    
+r = 1000
+s = 1
+for i in range(r):
+    push()
+    fill(0,0,0.3,i/(r+i/10))
+    rotate(i)
+    rect(random(-10,10),random(-10,10),random(10)+s-(s*i/r), + random(10)+s-(s*i/r))
+    pop()

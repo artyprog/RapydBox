@@ -1,0 +1,47 @@
+# Text on path from Tom
+
+WIDTH,HEIGHT = 500,500
+size(WIDTH, HEIGHT)
+
+fill(1)
+rect(0, 0, WIDTH, HEIGHT)
+mouse = canvas.mouse
+shadow()
+
+def  setup(canvas):
+    nonlocal path, txt
+    path = new Path()
+    path.moveto(0, 0)
+    path.curveto(0, HEIGHT, WIDTH/2, -150, WIDTH, HEIGHT)
+    txt = 'pattern canvas.js'; #We'll draw each character separately.
+
+
+def draw(canvas):
+    texte = "RapydScript - Canvas JS - Nodebox"
+    step = [0]
+    canvas.clear()
+    fill(1)
+    rect(0,0,WIDTH,HEIGHT)
+    stroke(0,0,0)
+    fontsize(20)
+    points = path.points(len(texte), {start:0.01    + (mouse.x-200)/500, 
+                                       end: 0.648625 + (mouse.x-200)/500})
+    derive(points, def(angle, pt):
+                        i = step[0]
+                        push()
+                        translate(pt.x, pt.y)
+                        rotate(angle)
+                        text(texte[i], 
+                            -textwidth(texte[i])/2, 0,
+                            {fill : new Color(1,0,0),
+                            fontweight: BOLD
+                            });
+                        pop()
+                        step[0] = step[0] + 1
+                        
+    )
+    drawpath(path, {fill: null, stroke: [1,0,0,0.35]})
+  
+canvas.setup = setup
+canvas.draw = draw
+canvas.run()

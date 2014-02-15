@@ -1,0 +1,30 @@
+size(400,400)
+
+
+background(0,0,0.01)
+shadow(0,0.3,0)
+
+translate(200,200)
+
+stroke(0,0,0,0.15)
+nostroke()
+
+
+
+    
+r = 2300
+s = 120
+for i in range(r):
+    push()
+    if i < 200:
+        fill(random(1),random(0.03),0.1,i/(r+i/10))
+    else:
+        fill(1,1,1,i/(r+i/10))
+    rotate(i)
+    scale((r*0.58)/i)
+    oval(random(-100,100),random(-5,5),random(2)+s-(s*i/r), random(-0.2,0.2)+s-(s*i/r))
+    pop()
+      
+
+
+    

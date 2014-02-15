@@ -1,0 +1,28 @@
+glcanvas = document.createElement("canvas")
+scene = document.getElementById("scene")
+scene.insertBefore(glcanvas, scene.firstChild)
+gl = glcanvas.getContext("experimental-webgl")
+
+glcanvas.width = 640
+glcanvas.height = 480
+
+
+def render():
+    nonlocal glcanvas
+    requestAnimationFrame(render, glcanvas)
+    gl.clearColor(1.0, 0.0, 0.0, 1.0)
+    gl.clear(gl.COLOR_BUFFER_BIT)
+    
+
+gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight)
+
+render()
+
+    
+
+    
+    
+
+    
+    
+
