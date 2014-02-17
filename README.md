@@ -1,4 +1,4 @@
-RapydBox can now make use of operator overloading, thanks for the wonderfule library 'paper.js'
+RapydBox can now make use of operator overloading, thanks to the excellent library 'paper.js'
 
 <img src="https://salvatore.pythonanywhere.com/RapydBox/static/images/vector.jpg" />
 
