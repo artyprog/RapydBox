@@ -1,0 +1,21 @@
+# This script demonstrates operations overloading
+# in RapydScript
+# using the excellent library : paper.js
+
+vect = Vector.create
+v1 = vect(10, 5)
+v2 = vect(8, 9)
+v3 = v1*2 +  v2*3
+s = "v1 * 2 + v2 * 3 = " +  v3
+
+def write(s,posx, posy):
+    text(s,posx,posy, {
+        fill: new Color(1,1,1,1),
+        font: "arial",
+        fontsize: 18  
+    })
+write("v1 = " + v1,0,20)
+write("v2 = " + v2,0,45)
+write(s,0,70)
+
+        
