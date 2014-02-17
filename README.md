@@ -1,4 +1,4 @@
-RapydBox can now make use of operator overloading (for now download the zip file to use this functionality)
+RapydBox can now make use of operator overloading (for now download the source   to use this functionality)
 
 <img src="https://salvatore.pythonanywhere.com/RapydBox/static/images/vector.jpg" />
 
