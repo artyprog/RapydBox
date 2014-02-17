@@ -1,6 +1,6 @@
 # This script demonstrates operations overloading
 # in RapydScript
-# using the excellent library : paper.js
+# it uses the excellent library : paper.js
 
 vect = Vector.create
 v1 = vect(10, 5)
