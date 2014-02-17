@@ -12,5 +12,6 @@
 		"width" : 1280,
 		"height" : 768
 
-  }
+  },
+  "js-flags" : "--harmony_proxies --harmony_collections"
 }
