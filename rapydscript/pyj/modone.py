@@ -1,6 +1,9 @@
-﻿App = (def ():
+﻿// Simple test module
+// Call App.hello() in RapydBox
+
+App = (def ():
     def hello():
-        alert("Hello")
+        alert(paper)
     return {hello : hello }
 )()
 

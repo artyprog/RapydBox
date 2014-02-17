@@ -43,14 +43,15 @@ function evaluate(data, create, name) {
     } catch(err) {
         alert("ERROR: " + err.message + ". Line " + err.line + ", column " + err.col + ".");
     }
+     
+    
 
     return String(output);
 }
 
 /////////////////////////// Entry Point //////////////////
-
 var mainScript = "rapydscript/pyj/moduleLoader.py";
-
+alert
 jQuery.noConflict();
 jQuery(document).ready(function () {
     jQuery.get(mainScript, function (r) {

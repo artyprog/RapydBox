@@ -37,7 +37,9 @@ function evaluate(data, create, name) {
         if (create) {
             createScript(String(output), name);
         } else {
-            eval(String(output));
+            window.source = (String(output));
+            if (!window.Application)
+                eval(String(output));
         }
 
     } catch(err) {
@@ -52,16 +54,8 @@ function evaluate(data, create, name) {
 var mainScript = "rapydscript/pyj/moduleLoader.py";
 
 
-function setupUI() {
-    var pstyle = 'border: Apx solid #ff0000; padding: 5px;'
-
-   
-}
-
-
 jQuery(document).ready(function () {
     jQuery.get(mainScript, function (r) {
         evaluate(r, true);
-        setupUI();
     });
 });

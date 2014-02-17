@@ -113,15 +113,17 @@ Application  = (def ($,D):
             delete(window.canvas)            
             window.canvas = new Canvas(Dom.getId('canvas'))  
             evaluate(getEditorValue())	
+            window.paper.PaperScript.load(window.source)
         except:
             alert("error when evaluating");	    
 
     def setupCanvas():
         window.canvas = new Canvas(Dom.getId('canvas'))            
-        $.get("sketches/first.pyj", def(r):
-                setEditorValue(r)            
-                evaluate(getEditorValue())	
-        )
+
+        #$.get("sketches/first.pyj", def(r):
+        #        setEditorValue(r)            
+        #        evaluate(getEditorValue())	
+        #)
            
     def clearCanvas():
         stopAnim()

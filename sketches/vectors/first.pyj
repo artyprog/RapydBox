@@ -1,0 +1,3 @@
+c = Application.vector(4,5)
+c2 = Application.vector(3,5)
+alert(c + c2 * 5)

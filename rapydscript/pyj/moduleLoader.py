@@ -1,4 +1,4 @@
-﻿mod = ["rapydscript/pyj/modone.py",
+﻿mod = ["rapydscript/pyj/vector.py",
        "rapydscript/pyj/main.py"]
 
 

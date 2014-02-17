@@ -1,0 +1,11 @@
+src  = """
+     function vector(x,y) {
+           return new paper.Point(x,y);
+       }
+       var p = vector(2,3);
+       var p2 = vector(2,3);
+       alert(p * 2);
+
+"""
+
+paper.PaperScript.load(src);
