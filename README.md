@@ -1,5 +1,8 @@
-<img src="https://salvatore.pythonanywhere.com/RapydBox/static/images/sombrero.jpg" />
+RapydBox can now make use of operator overloading, thanks for the wonderfule library 'paper.js'
 
+<img src="https://salvatore.pythonanywhere.com/RapydBox/static/images/vector.jpg" />
+
+<img src="https://salvatore.pythonanywhere.com/RapydBox/static/images/sombrero.jpg" />
 
 Here are the steps to run RapydBox :
 
