@@ -26,6 +26,7 @@ Crédits :
  - Thanks to Alexander Tsepkov the creator of RapydScript
  - Charles Law for allowing testing RapydScript online
  - Frederik de Bleser and Tom De Smedt for Nodebox
+ - Juerg Lehni & Jonathan Puckey the creators of PaperJS
  - Roger Wang for Node-WebKit
  - The creators of CodeMirror
  
